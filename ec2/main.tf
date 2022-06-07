@@ -1,10 +1,10 @@
-variable "ami_id" {
-    type = string
-    default = ""
-}
+resource "aws_instance" "sheed_server" {
+  ami           = "${var.ami_id}"
+  instance_type = "${var.instance_type}"
+ 
 
-variable "instance_type" {
-    type = string 
-    default = ""
+  tags = {
+    Name = "sheedec2server"
+  }
 }
 
