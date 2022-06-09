@@ -1,10 +1,10 @@
 resource "aws_instance" "sheed_server" {
-  ami           = "${var.ami_id}"
-  instance_type = "${var.instance_type}"
+  ami           = "ami-0022f774911c1d690"
+  instance_type = "t2.micro"
  
 
   tags = {
     Name = "sheedec2server"
-  }
+  
 }
-
+}
